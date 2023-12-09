@@ -10,9 +10,9 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-       {/*  <Route path="/" element={<Login/>} />
+        <Route path="/" element={<Login/>} />
 
-        <Route path="/api/users" element={<PaginatedList/>} />
+        {/* <Route path="/api/users" element={<PaginatedList/>} />
 
         <Route path="*" element={<NotFound/>} />  */}
       </Routes>
