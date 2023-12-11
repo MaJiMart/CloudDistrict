@@ -1,5 +1,5 @@
 .formContainer{
-  height: 90vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
     background-color: $back;
     border-radius: 20px;
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,10 @@
             box-shadow: 0px 0px 10px 2px $other;
           }
         }
+      }
+      span{
+        color: $jazzy;
+        font-size: 1.3rem;
       }
       .access{
         display: flex;

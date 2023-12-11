@@ -1,29 +1,48 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { LoginFacebook } from '../Access/LoginFacebook';
 import { LoginGoogle } from '../Access/LoginGoogle';
 import { LoginTwitter } from '../Access/LoginTwitter';
+import { API_URL } from '../../service/apirest';
 
 export const Login = () => {
-  const handlerSubmit = (e) => {
-    e.preventDefault();
-  }
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    });
-  
-  const saveChanges = async (e) => {
-    await setFormData({
-        ...formData,
-        [e.target.name]: e.target.value
-    })
-    console.log(formData);
-  }
+    email: '',
+    password: '',
+  });
 
-  const handlerLog = () =>{
-    console.log('login');
-  }
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handlerSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const saveChanges = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handlerLog = () => {
+    const url = API_URL + 'login';
+    axios.post(url, formData)
+      .then((res) => {
+      //console.log(res);
+      if(res.status === 200){
+        localStorage.setItem('token', res.data.token);
+        navigate('/api/users')
+      }
+    })
+    .catch((error) => {
+      setError(true);
+      setErrorMessage(error.message);
+    });
+  };
 
   return (
     <div className='formContainer'>
@@ -31,7 +50,7 @@ export const Login = () => {
         <h2>Login</h2>
         <input
           className='campo'
-          id='login'
+          id='email'
           type='email'
           name='email'
           placeholder='Write your email address'
@@ -47,12 +66,14 @@ export const Login = () => {
           onChange={saveChanges}
           value={formData.password}
         />
+        {error && <span>{errorMessage}</span>}
         <div className='btnContainer'>
-          <input 
-          className='btnLogin'
-          type='submit'
-          value='Login'
-          onClick={handlerLog}/>
+          <input
+            className='btnLogin'
+            type='submit'
+            value='Login'
+            onClick={handlerLog}
+          />
         </div>
         <div className='access'>
           <h3>Or with:</h3>
