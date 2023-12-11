@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/api/users" element={<Users/>} />
-        <Route path="/api/newusers" element={<NewUser/>} /> //crear usuario
+        <Route path="/api/newuser" element={<NewUser/>} /> //crear usuario
         <Route path="/api/users/:uid" element={<UserInfo/>} /> //obtener usuario por ID
         <Route path="/api/users/:uid" element={<PatchUser/>} /> //editar usuario
         <Route path="*" element={<NotFound/>} /> 

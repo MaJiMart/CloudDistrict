@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { API_URL } from '../../service/apirest';
 import axios from 'axios';
+import { ButtonAdd } from '../Access/ButtonAdd';
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
@@ -20,7 +21,7 @@ export const Users = () => {
   }, []);
 
   return (
-    <div className='users'>
+    <div className='allUsers'>
       <header>
         <img src='/assets/users3.png' alt='header users image' />
         <div className='infoLog'>
@@ -48,6 +49,14 @@ export const Users = () => {
           </div>
         ))}
       </div>
+      <footer>
+        <Link to={'/api/newuser'}>
+          <div className='tooltip'>
+            <ButtonAdd />
+            <span class="tooltiptext">Add a user</span>
+          </div>
+        </Link>
+      </footer>
     </div>
   );
 };

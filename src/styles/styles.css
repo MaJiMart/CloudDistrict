@@ -147,21 +147,21 @@
   font-size: 3rem;
 }
 
-.users {
+.allUsers {
   display: flex;
   flex-direction: column;
 }
-.users header {
+.allUsers header {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.users header img {
+.allUsers header img {
   position: absolute;
   width: 100%;
 }
-.users header .infoLog {
+.allUsers header .infoLog {
   position: inherit;
   display: flex;
   flex-direction: row;
@@ -174,15 +174,15 @@
   padding: 1.5rem;
   color: #E8E8E8;
 }
-.users header .infoLog .uinfo {
+.allUsers header .infoLog .uinfo {
   background-color: #ff99bd;
   padding: 1.5rem;
   border-radius: 10px;
 }
-.users header .infoLog .uinfo p {
+.allUsers header .infoLog .uinfo p {
   font-size: 1.3rem;
 }
-.users header .infoLog .btnLogout {
+.allUsers header .infoLog .btnLogout {
   background-color: rgba(20, 20, 20, 0.6431372549);
   margin: 3rem;
   height: 3rem;
@@ -192,10 +192,10 @@
   border-color: rgba(20, 20, 20, 0.6431372549);
   color: #E8E8E8;
 }
-.users header .infoLog .btnLogout:hover {
+.allUsers header .infoLog .btnLogout:hover {
   box-shadow: 0px 0px 10px 2px #E8E8E8;
 }
-.users .cardsContainer {
+.allUsers .cardsContainer {
   position: inherit;
   margin-top: 3rem;
   height: 50vh;
@@ -204,7 +204,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.users .cardsContainer .userCard {
+.allUsers .cardsContainer .userCard {
   background-image: url("/public/assets/background4.png");
   border-radius: 0px 20px 0px 20px;
   width: 15rem;
@@ -216,20 +216,20 @@
   justify-content: center;
   align-items: center;
 }
-.users .cardsContainer .userCard .cardPic {
+.allUsers .cardsContainer .userCard .cardPic {
   width: 80%;
   border-radius: 0px 20px 0px 20px;
 }
-.users .cardsContainer .userCard p {
+.allUsers .cardsContainer .userCard p {
   margin-top: 1rem;
   font-family: "Gochi Hand", cursive;
   font-size: 2rem;
   color: #d095fa;
 }
-.users .cardsContainer .userCard .card-footer {
+.allUsers .cardsContainer .userCard .card-footer {
   margin-top: 1rem;
 }
-.users .cardsContainer .userCard .card-footer .btnDetail {
+.allUsers .cardsContainer .userCard .card-footer .btnDetail {
   background-color: #E8E8E8;
   margin: 1rem;
   height: 3rem;
@@ -240,8 +240,113 @@
   border-color: #ffd49a;
   color: #d095fa;
 }
-.users .cardsContainer .userCard .card-footer .btnDetail:hover {
+.allUsers .cardsContainer .userCard .card-footer .btnDetail:hover {
   box-shadow: 0px 0px 10px 2px #ffd49a;
+}
+.allUsers footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.allUsers footer .tooltip {
+  position: relative;
+  display: inline-block;
+}
+.allUsers footer .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  color: #E8E8E8;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.allUsers footer .addOne {
+  font-size: 4rem;
+  color: #ff99bd;
+  margin-right: 15rem;
+  width: 5rem;
+}
+.allUsers footer .addOne:hover {
+  color: #ffd49a;
+}
+.allUsers footer .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.userArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userArea header {
+  position: relative;
+}
+.userArea .cardInfo {
+  background-color: rgba(232, 232, 232, 0.5215686275);
+  border-radius: 20px;
+  width: 40vw;
+  height: 40vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userArea .cardInfo .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+.userArea .cardInfo .info .dataUser {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+}
+.userArea .cardInfo .info .dataUser h3 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #ffd49a;
+  margin-bottom: 0.5rem;
+}
+.userArea .cardInfo .info .dataUser p {
+  font-family: "Tenor Sans";
+  font-size: 1.7rem;
+  color: rgb(17, 17, 17);
+  margin-bottom: 0.5rem;
+}
+.userArea .cardInfo .info .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.userArea .cardInfo .info .right .picUser {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.userArea .cardInfo .info .right .picUser img {
+  border-radius: 20px;
+}
+.userArea .cardInfo .info .right .editUser {
+  width: 100%;
+  height: 50%;
+}
+.userArea footer .btnBack {
+  font-size: 6rem;
+  color: #ff99bd;
+  margin: 1rem;
 }
 
 .notFound {
