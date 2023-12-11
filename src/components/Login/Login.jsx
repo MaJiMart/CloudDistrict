@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { NavBar } from '../NavBar/NavBar';
 import { LoginFacebook } from '../Access/LoginFacebook';
 import { LoginGoogle } from '../Access/LoginGoogle';
 import { LoginTwitter } from '../Access/LoginTwitter';
@@ -45,6 +46,8 @@ export const Login = () => {
   };
 
   return (
+    <>
+    <NavBar/>
     <div className='formContainer'>
       <form className='formlogin' onSubmit={handlerSubmit}>
         <h2>Login</h2>
@@ -83,5 +86,6 @@ export const Login = () => {
         </div>
       </form>
     </div>
+    </>
   );
 };

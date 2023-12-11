@@ -1,0 +1,20 @@
+.notFound {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  h3 {
+    position: absolute;
+    font-family: $webfont;
+    color: $jazzy;
+    margin-bottom: 3.5rem;
+    font-size: 2.5rem;
+  }
+}
