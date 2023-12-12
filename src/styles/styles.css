@@ -238,7 +238,7 @@
   border-radius: 10px;
   border-style: solid;
   border-color: #ffd49a;
-  color: #d095fa;
+  color: rgba(20, 20, 20, 0.6431372549);
 }
 .allUsers .cardsContainer .userCard .card-footer .btnDetail:hover {
   box-shadow: 0px 0px 10px 2px #ffd49a;
@@ -342,11 +342,195 @@
 .userArea .cardInfo .info .right .editUser {
   width: 100%;
   height: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.userArea footer .btnBack {
+.userArea .cardInfo .info .right .editUser div {
+  display: flex;
+  flex-direction: column;
+}
+.userArea .cardInfo .info .right .editUser div .btnEdit {
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border-color: #fffbbb;
+  color: #E8E8E8;
+}
+.userArea .cardInfo .info .right .editUser div .btnEdit:hover {
+  box-shadow: 0px 0px 10px 2px #fffbbb;
+}
+.userArea .cardInfo .info .right .editUser div .btnDelete {
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border-color: #d095fa;
+  color: #E8E8E8;
+}
+.userArea .cardInfo .info .right .editUser div .btnDelete:hover {
+  box-shadow: 0px 0px 10px 2px #d095fa;
+}
+.userArea footer .btnHome {
   font-size: 6rem;
   color: #ff99bd;
   margin: 1rem;
+}
+.userArea footer .btnHome:hover {
+  font-size: 7rem;
+}
+
+.editUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.editUser header {
+  position: relative;
+}
+.editUser .cardEdit {
+  background-color: rgba(232, 232, 232, 0.5215686275);
+  border-radius: 20px;
+  width: 40vw;
+  height: 40vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.editUser .cardEdit h1 {
+  width: 100%;
+  margin: 1rem;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 200;
+  font-size: 2rem;
+}
+.editUser .cardEdit h3 {
+  margin-left: 2rem;
+  font-family: "Tenor Sans";
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: #fffbbb;
+  margin-bottom: 0.5rem;
+}
+.editUser .cardEdit .editinp {
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  height: 3rem;
+  margin: 0.5rem 0rem 1rem 2rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #E8E8E8;
+  border-color: #fffbbb;
+  border-radius: 10px;
+}
+.editUser .cardEdit div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.editUser .cardEdit div .btnEdit {
+  background-color: #fffbbb;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border-color: #fffbbb;
+  color: rgb(17, 17, 17);
+}
+.editUser .cardEdit div .btnEdit:hover {
+  box-shadow: 0px 0px 10px 2px #fffbbb;
+}
+.editUser footer {
+  display: flex;
+  flex-direction: row;
+}
+.editUser footer .btnBack {
+  font-size: 6rem;
+  color: #ff99bd;
+  margin: 1rem;
+}
+.editUser footer .btnBack:hover {
+  font-size: 7rem;
+}
+.editUser footer .btnHome {
+  font-size: 6rem;
+  color: #ff99bd;
+  margin: 1rem;
+}
+.editUser footer .btnHome:hover {
+  font-size: 7rem;
+}
+
+.createUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.createUser header {
+  position: relative;
+}
+.createUser .cardCreate {
+  background-color: rgba(232, 232, 232, 0.5215686275);
+  border-radius: 20px;
+  width: 40vw;
+  height: 40vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.createUser .cardCreate h3 {
+  margin-left: 2rem;
+  font-family: "Tenor Sans";
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: #ff99bd;
+  margin-bottom: 0.5rem;
+}
+.createUser .cardCreate .editinp {
+  background-color: rgba(232, 232, 232, 0.5215686275);
+  height: 3rem;
+  margin: 0.5rem 0rem 1rem 2rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #E8E8E8;
+  border-color: #ff99bd;
+  border-radius: 10px;
+}
+.createUser .cardCreate div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.createUser .cardCreate div .btnEdit {
+  background-color: #ff99bd;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border-color: #ff99bd;
+  color: rgba(20, 20, 20, 0.6431372549);
+}
+.createUser .cardCreate div .btnEdit:hover {
+  box-shadow: 0px 0px 10px 2px #ff99bd;
+}
+.createUser footer .btnHome {
+  font-size: 6rem;
+  color: #ff99bd;
+  margin: 1rem;
+}
+.createUser footer .btnHome:hover {
+  font-size: 7rem;
 }
 
 .notFound {

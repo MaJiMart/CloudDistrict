@@ -42,7 +42,7 @@ export const Users = () => {
             />
             <p>{user.first_name}</p>
             <div className='card-footer'>
-              <Link to={`/api/users/${user.id}`}>
+              <Link to={`/user/${user.id}`}>
                 <button className='btnDetail'>Detail</button>
               </Link>
             </div>
@@ -50,7 +50,7 @@ export const Users = () => {
         ))}
       </div>
       <footer>
-        <Link to={'/api/newuser'}>
+        <Link to={'/newuser'}>
           <div className='tooltip'>
             <ButtonAdd />
             <span class="tooltiptext">Add a user</span>

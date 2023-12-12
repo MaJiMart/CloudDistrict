@@ -36,7 +36,7 @@ export const Login = () => {
       //console.log(res);
       if(res.status === 200){
         localStorage.setItem('token', res.data.token);
-        navigate('/api/users')
+        navigate('/users')
       }
     })
     .catch((error) => {

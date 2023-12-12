@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../service/apirest';
-import { ButtonBack } from '../Access/ButtonBack';
+import { ButtonHome } from '../Access/ButtonHome';
 
 export const UserInfo = () => {
   const { uid } = useParams();
@@ -41,14 +41,23 @@ export const UserInfo = () => {
               <div className='picUser'>
                 <img src={user.avatar} alt={`Avatar de ${user.first_name}`} />
               </div>
-              <div className='editUser'></div>
+              <div className='editUser'>
+                <div>
+                  <Link to={`/user/edit/${user.id}`}>
+                    <button className='btnEdit'>Edit</button>
+                  </Link>
+                  <Link to={''}>
+                    <button className='btnDelete'>Delete</button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         )}
       </div>
       <footer>
-        <Link to={'/api/users/'}>
-          <ButtonBack/>
+        <Link to={'/users'}>
+          <ButtonHome />
         </Link>
       </footer>
     </div>

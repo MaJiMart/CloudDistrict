@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>} />
-        <Route path="/api/users" element={<Users/>} />
-        <Route path="/api/newuser" element={<NewUser/>} /> //crear usuario
-        <Route path="/api/users/:uid" element={<UserInfo/>} /> //obtener usuario por ID
-        <Route path="/api/users/:uid" element={<PatchUser/>} /> //editar usuario
+        <Route path="/users" element={<Users/>} />
+        <Route path="/newuser" element={<NewUser/>} /> //crear usuario
+        <Route path="/user/:uid" element={<UserInfo/>} /> //obtener usuario por ID
+        <Route path="/user/edit/:uid" element={<PatchUser/>} /> //editar usuario
         <Route path="*" element={<NotFound/>} /> 
       </Routes>
     </BrowserRouter>
