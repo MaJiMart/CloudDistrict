@@ -1,11 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { API_URL } from '../../service/apirest';
+import Swal from 'sweetalert2';
+import { useUserContext } from '../../context/UserContext';
 import { ButtonHome } from '../Access/ButtonHome';
 
 export const UserInfo = () => {
+  const { API_URL } = useUserContext();
   const { uid } = useParams();
+
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -20,6 +23,33 @@ export const UserInfo = () => {
     };
     fetchData();
   }, []);
+
+  const handlerDel = () => {
+    const url = API_URL + `users/${uid}`;
+    axios
+      .delete(url)
+      .then((res) => {
+        if (res.status === 204) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `User id ${uid} was deleted`,
+            showConfirmButton: false,
+            timer: 3500,
+            background: '#111111',
+            color: '#d095fa',
+          });
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          window.location.href = '/users';
+        }, 4000);
+      });
+  };
 
   return (
     <div className='userArea'>
@@ -46,9 +76,12 @@ export const UserInfo = () => {
                   <Link to={`/user/edit/${user.id}`}>
                     <button className='btnEdit'>Edit</button>
                   </Link>
-                  <Link to={''}>
-                    <button className='btnDelete'>Delete</button>
-                  </Link>
+                  <input
+                    className='btnDelete'
+                    type='submit'
+                    value='Delete'
+                    onClick={handlerDel}
+                  />
                 </div>
               </div>
             </div>

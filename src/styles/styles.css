@@ -320,7 +320,7 @@
 .userArea .cardInfo .info .dataUser p {
   font-family: "Tenor Sans";
   font-size: 1.7rem;
-  color: rgb(17, 17, 17);
+  color: #111111;
   margin-bottom: 0.5rem;
 }
 .userArea .cardInfo .info .right {
@@ -412,7 +412,16 @@
   font-weight: 200;
   font-size: 2rem;
 }
-.editUser .cardEdit h3 {
+.editUser .cardEdit .formEdit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.editUser .cardEdit .formEdit .dataEdit {
+  display: flex;
+  flex-direction: column;
+}
+.editUser .cardEdit .formEdit .dataEdit h3 {
   margin-left: 2rem;
   font-family: "Tenor Sans";
   font-weight: 200;
@@ -420,9 +429,10 @@
   color: #fffbbb;
   margin-bottom: 0.5rem;
 }
-.editUser .cardEdit .editinp {
+.editUser .cardEdit .formEdit .dataEdit .editinp {
   background-color: rgba(20, 20, 20, 0.6431372549);
   height: 3rem;
+  width: 17rem;
   margin: 0.5rem 0rem 1rem 2rem;
   padding: 1rem;
   font-size: 1.3rem;
@@ -430,12 +440,21 @@
   border-color: #fffbbb;
   border-radius: 10px;
 }
-.editUser .cardEdit div {
-  width: 100%;
+.editUser .cardEdit .formEdit div {
+  margin: 1rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.editUser .cardEdit div .btnEdit {
+.editUser .cardEdit .formEdit div span {
+  padding: 0.5rem;
+  background-color: #ff99bd;
+  border-radius: 20px;
+  color: #E8E8E8;
+  font-size: 1.3rem;
+}
+.editUser .cardEdit .formEdit div .btnEdit {
   background-color: #fffbbb;
   margin: 0.5rem 0rem 0.5rem 0rem;
   height: 3rem;
@@ -443,9 +462,9 @@
   font-size: 1.3rem;
   border-radius: 10px;
   border-color: #fffbbb;
-  color: rgb(17, 17, 17);
+  color: #111111;
 }
-.editUser .cardEdit div .btnEdit:hover {
+.editUser .cardEdit .formEdit div .btnEdit:hover {
   box-shadow: 0px 0px 10px 2px #fffbbb;
 }
 .editUser footer {
@@ -483,12 +502,28 @@
   border-radius: 20px;
   width: 40vw;
   height: 40vh;
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.createUser .cardCreate h3 {
+.createUser .cardCreate h1 {
+  width: 100%;
+  margin: 1rem;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 200;
+  font-size: 2rem;
+}
+.createUser .cardCreate .formAdd {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.createUser .cardCreate .formAdd .newData {
+  display: flex;
+  flex-direction: column;
+}
+.createUser .cardCreate .formAdd .newData h3 {
   margin-left: 2rem;
   font-family: "Tenor Sans";
   font-weight: 200;
@@ -496,22 +531,32 @@
   color: #ff99bd;
   margin-bottom: 0.5rem;
 }
-.createUser .cardCreate .editinp {
+.createUser .cardCreate .formAdd .newData .editinp {
   background-color: rgba(232, 232, 232, 0.5215686275);
   height: 3rem;
+  width: 17rem;
   margin: 0.5rem 0rem 1rem 2rem;
   padding: 1rem;
   font-size: 1.3rem;
-  color: #E8E8E8;
+  color: rgba(20, 20, 20, 0.6431372549);
   border-color: #ff99bd;
   border-radius: 10px;
 }
-.createUser .cardCreate div {
-  width: 100%;
+.createUser .cardCreate .formAdd div {
+  margin: 1rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.createUser .cardCreate div .btnEdit {
+.createUser .cardCreate .formAdd div span {
+  padding: 0.5rem;
+  background-color: #d095fa;
+  border-radius: 20px;
+  color: #E8E8E8;
+  font-size: 1.3rem;
+}
+.createUser .cardCreate .formAdd div .btnAdd {
   background-color: #ff99bd;
   margin: 0.5rem 0rem 0.5rem 0rem;
   height: 3rem;
@@ -521,7 +566,7 @@
   border-color: #ff99bd;
   color: rgba(20, 20, 20, 0.6431372549);
 }
-.createUser .cardCreate div .btnEdit:hover {
+.createUser .cardCreate .formAdd div .btnAdd:hover {
   box-shadow: 0px 0px 10px 2px #ff99bd;
 }
 .createUser footer .btnHome {

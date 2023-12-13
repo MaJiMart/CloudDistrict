@@ -1,24 +1,23 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { API_URL } from '../../service/apirest';
-import axios from 'axios';
+import { useUserContext } from '../../context/UserContext';
 import { ButtonAdd } from '../Access/ButtonAdd';
 
 export const Users = () => {
-  const [users, setUsers] = useState([]);
+  const { users, API_URL } = useUserContext();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let url = API_URL + 'users?per_page=5';
-        const res = await axios.get(url);
-        setUsers(res.data.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  }, []);
+  const handlerLogout = () => {
+    const url = API_URL + 'logout';
+    axios
+      .post(url)
+      .then((res) => {
+        if (res.status === 200) {
+          window.location.href = '/';
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+  };
 
   return (
     <div className='allUsers'>
@@ -27,9 +26,14 @@ export const Users = () => {
         <div className='infoLog'>
           <div className='uinfo'>
             <p>Aqui el nombre </p>
-            <img src='' alt='' />
+            {<img src='' alt='' />}
           </div>
-          <input className='btnLogout' type='submit' value='Logout' />
+          <input
+            className='btnLogout'
+            type='submit'
+            value='Logout'
+            onClick={handlerLogout}
+          />
         </div>
       </header>
       <div className='cardsContainer'>
@@ -53,7 +57,7 @@ export const Users = () => {
         <Link to={'/newuser'}>
           <div className='tooltip'>
             <ButtonAdd />
-            <span class="tooltiptext">Add a user</span>
+            <span className='tooltiptext'>Add a user</span>
           </div>
         </Link>
       </footer>
