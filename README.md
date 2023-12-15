@@ -19,7 +19,6 @@
     <p>react-dom: "^18.2.0",</p>
     <p>react-router-dom: "^6.20.1",</p>
     <p>sass: "^1.69.5",</p>
-    <p>spinners-react: "^1.0.7",</p>
     <p>sweetalert2: "^11.10.1"
 </p>
 <p>⚙️ Dependencias (dev):</p>
