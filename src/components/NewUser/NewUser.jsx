@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useUserContext } from '../../context/UserContext';
 import { ButtonHome } from '../Access/ButtonHome';
 
 export const NewUser = () => {
+  const { isAuthenticated } = useAuth0();
   const { API_URL } = useUserContext();
 
   const [data, setData] = useState({
@@ -15,6 +17,8 @@ export const NewUser = () => {
 
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  const navigate = useNavigate()
 
   const handlerSubmit = (e) => {
     e.preventDefault();
@@ -52,57 +56,59 @@ export const NewUser = () => {
         setData({ name: '', job: '' });
 
         setTimeout(() => {
-          window.location.href = '/users';
+          navigate('/users');
         }, 4000);
       });
   };
 
   return (
-    <div className='createUser'>
-      <header>
-        <img src='/assets/newuser.png' alt='header users image' />
-      </header>
-      <div className='cardCreate'>
-        <h1> Create a new one: </h1>
-        <form className='formAdd' onSubmit={handlerSubmit}>
-          <div className='newData'>
-            <h3>Name:</h3>
-            <input
-              className='editinp'
-              id='name'
-              type='text'
-              name='name'
-              placeholder='Write a name'
-              onChange={saveChanges}
-              value={data.name}
-            />
-            <h3>Job:</h3>
-            <input
-              className='editinp'
-              id='job'
-              type='text'
-              name='job'
-              placeholder='Write user job'
-              onChange={saveChanges}
-              value={data.job}
-            />
-          </div>
-          <div>
-            {error && <span>{errorMessage}</span>}
-            <input
-              className='btnAdd'
-              type='submit'
-              value='Create'
-              onClick={handlerAdd}
-            />
-          </div>
-        </form>
+    isAuthenticated && (
+      <div className='createUser'>
+        <header>
+          <img src='/assets/newuser.png' alt='header users image' />
+        </header>
+        <div className='cardCreate'>
+          <h1> Create a new one: </h1>
+          <form className='formAdd' onSubmit={handlerSubmit}>
+            <div className='newData'>
+              <h3>Name:</h3>
+              <input
+                className='editinp'
+                id='name'
+                type='text'
+                name='name'
+                placeholder='Write a name'
+                onChange={saveChanges}
+                value={data.name}
+              />
+              <h3>Job:</h3>
+              <input
+                className='editinp'
+                id='job'
+                type='text'
+                name='job'
+                placeholder='Write user job'
+                onChange={saveChanges}
+                value={data.job}
+              />
+            </div>
+            <div>
+              {error && <span>{errorMessage}</span>}
+              <input
+                className='btnAdd'
+                type='submit'
+                value='Create'
+                onClick={handlerAdd}
+              />
+            </div>
+          </form>
+        </div>
+        <footer>
+          <Link to={'/users'}>
+            <ButtonHome />
+          </Link>
+        </footer>
       </div>
-      <footer>
-        <Link to={'/users'}>
-          <ButtonHome />
-        </Link>
-      </footer>
-    </div>
+    )
   );
 };

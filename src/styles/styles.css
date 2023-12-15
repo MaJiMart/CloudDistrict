@@ -31,8 +31,122 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /*   .formlogin{
+    background-color: $back;
+    border-radius: 20px;
+    width: 40vw;
+    height: 50vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      h2{
+        font-family: $heading;
+        font-size: 2.5rem;
+        color: $tittles;
+        margin-bottom: 1rem;
+      }
+      .campo{
+        background-color: $back;
+        height: 3rem;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        color: $white;
+        border-color: $other;
+        border-radius: 10px;
+      }
+      .btnContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0rem 0.5rem 0rem 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $back;
+        .btnLogin{
+          background-color: $back;
+          margin: 0.5rem 0rem 0.5rem 0rem;
+          height: 3rem;
+          width: 8rem;
+          font-size: 1.3rem;
+          border-radius: 10px;
+          border-color: $other;
+          color: $white;
+          &:hover{
+            box-shadow: 0px 0px 10px 2px $other;
+          }
+        }
+      }
+      span{
+        color: $jazzy;
+        font-size: 1.3rem;
+      }
+      .access{
+        display: flex;
+        flex-direction: row;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        h3{
+          color: $tittles;
+          margin: 2rem 1rem 0 0;
+          font-size: 1.3rem;
+          justify-content: center;
+          align-items: center;
+        }
+        .facebook{
+          margin: 0.5rem 0.5rem 0rem 0.5rem;
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            border: 1px solid $white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 5px $white;
+          }
+          .fbIcon{
+            color: $white;
+            font-size: 3rem;
+          }
+        }
+        .google{
+          margin: 0.5rem 0.5rem 0rem 0.5rem;
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            border: 1px solid $white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 5px $white;
+          }
+          .googleIcon{
+            color: $white;
+            font-size: 3rem;
+          }
+        }
+        .twitter{
+          margin: 0.5rem 0.5rem 0rem 0.5rem;
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            border: 1px solid $white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 5px $white;
+          }
+          .twIcon{
+            color: $white;
+            font-size: 3rem;
+          }
+        }
+      }
+  } */
 }
-.formContainer .formlogin {
+.formContainer .login {
   background-color: rgba(20, 20, 20, 0.6431372549);
   border-radius: 20px;
   width: 40vw;
@@ -40,111 +154,30 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-.formContainer .formlogin h2 {
+.formContainer .login h2 {
   font-family: "Gochi Hand", cursive;
   font-size: 2.5rem;
+  font-weight: 300;
   color: #d095fa;
-  margin-bottom: 1rem;
+  margin: 2rem;
 }
-.formContainer .formlogin .campo {
+.formContainer .login div {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer .login div .btnLogin {
   background-color: rgba(20, 20, 20, 0.6431372549);
-  height: 3rem;
-  margin: 0.5rem 0rem 0.5rem 0rem;
-  padding: 1rem;
-  font-size: 1.3rem;
-  color: #E8E8E8;
-  border-color: #ffd49a;
-  border-radius: 10px;
-}
-.formContainer .formlogin .btnContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0rem 0.5rem 0rem 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(20, 20, 20, 0.6431372549);
-}
-.formContainer .formlogin .btnContainer .btnLogin {
-  background-color: rgba(20, 20, 20, 0.6431372549);
-  margin: 0.5rem 0rem 0.5rem 0rem;
-  height: 3rem;
-  width: 8rem;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  border-color: #ffd49a;
-  color: #E8E8E8;
-}
-.formContainer .formlogin .btnContainer .btnLogin:hover {
-  box-shadow: 0px 0px 10px 2px #ffd49a;
-}
-.formContainer .formlogin span {
-  color: #ff99bd;
-  font-size: 1.3rem;
-}
-.formContainer .formlogin .access {
-  display: flex;
-  flex-direction: row;
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-}
-.formContainer .formlogin .access h3 {
-  color: #d095fa;
-  margin: 2rem 1rem 0 0;
-  font-size: 1.3rem;
-  justify-content: center;
-  align-items: center;
-}
-.formContainer .formlogin .access .facebook {
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.formContainer .formlogin .access .facebook:hover {
-  border: 1px solid #E8E8E8;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 5px #E8E8E8;
-}
-.formContainer .formlogin .access .facebook .fbIcon {
-  color: #E8E8E8;
+  padding: 1.5rem;
   font-size: 3rem;
-}
-.formContainer .formlogin .access .google {
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.formContainer .formlogin .access .google:hover {
-  border: 1px solid #E8E8E8;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 5px #E8E8E8;
-}
-.formContainer .formlogin .access .google .googleIcon {
+  border: 5px solid #d095fa;
   color: #E8E8E8;
-  font-size: 3rem;
 }
-.formContainer .formlogin .access .twitter {
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.formContainer .formlogin .access .twitter:hover {
-  border: 1px solid #E8E8E8;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 5px #E8E8E8;
-}
-.formContainer .formlogin .access .twitter .twIcon {
-  color: #E8E8E8;
-  font-size: 3rem;
+.formContainer .login div .btnLogin:hover {
+  box-shadow: 0px 0px 30px 2px #d095fa;
 }
 
 .allUsers {

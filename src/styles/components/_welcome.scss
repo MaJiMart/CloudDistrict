@@ -1,0 +1,42 @@
+.welcome {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .infoWelcome {
+    background-color: $back;
+    border-radius: 20px;
+    width: 40vw;
+    height: 50vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: $heading;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $tittles;
+      margin: 2rem 2rem 1rem 2rem;
+    }
+    p {
+      font-family: $webfont;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: $white;
+      margin: 1rem 2rem 2rem 2rem;
+    }
+    .btnIn {
+      display: flex;
+      justify-content: center;
+      height: 10rem;
+      .btnContinue {
+        font-size: 9rem;
+        color: $jazzy;
+        &:hover {
+          color: $other;
+        }
+      }
+    }
+  }
+}
