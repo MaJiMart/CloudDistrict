@@ -5,11 +5,58 @@
   font-family: "Tenor Sans", sans-serif;
 }
 
-#root {
-  background-image: url("/public/assets/background3.png");
-  background-repeat: repeat-x;
+body {
+  background-image: url("/assets/background1.png");
+  background-repeat: repeat;
+  width: 100%;
   height: auto;
-  min-height: 100vh;
+}
+
+.backWelcome {
+  background-image: url("/assets/background3.png");
+  height: 100vh;
+}
+.backWelcome .welcome {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backWelcome .welcome .infoWelcome {
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  border-radius: 20px;
+  width: 40vw;
+  height: 50vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.backWelcome .welcome .infoWelcome h1 {
+  font-family: "Gochi Hand", cursive;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #d095fa;
+  margin: 2rem 2rem 1rem 2rem;
+}
+.backWelcome .welcome .infoWelcome p {
+  font-family: "Tenor Sans";
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #E8E8E8;
+  margin: 1rem 2rem 2rem 2rem;
+}
+.backWelcome .welcome .infoWelcome .btnIn {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+}
+.backWelcome .welcome .infoWelcome .btnIn .btnContinue {
+  font-size: 9rem;
+  color: #ff99bd;
+}
+.backWelcome .welcome .infoWelcome .btnIn .btnContinue:hover {
+  color: #ffd49a;
 }
 
 .navbar {
@@ -25,128 +72,18 @@
   height: 10rem;
 }
 
-.formContainer {
+.backLogin {
+  background-image: url("/assets/background3.png");
+  height: 100vh;
+}
+.backLogin .formContainer {
   height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*   .formlogin{
-    background-color: $back;
-    border-radius: 20px;
-    width: 40vw;
-    height: 50vh;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      h2{
-        font-family: $heading;
-        font-size: 2.5rem;
-        color: $tittles;
-        margin-bottom: 1rem;
-      }
-      .campo{
-        background-color: $back;
-        height: 3rem;
-        margin: 0.5rem 0rem 0.5rem 0rem;
-        padding: 1rem;
-        font-size: 1.3rem;
-        color: $white;
-        border-color: $other;
-        border-radius: 10px;
-      }
-      .btnContainer{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin: 0rem 0.5rem 0rem 0.5rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid $back;
-        .btnLogin{
-          background-color: $back;
-          margin: 0.5rem 0rem 0.5rem 0rem;
-          height: 3rem;
-          width: 8rem;
-          font-size: 1.3rem;
-          border-radius: 10px;
-          border-color: $other;
-          color: $white;
-          &:hover{
-            box-shadow: 0px 0px 10px 2px $other;
-          }
-        }
-      }
-      span{
-        color: $jazzy;
-        font-size: 1.3rem;
-      }
-      .access{
-        display: flex;
-        flex-direction: row;
-        margin: 0.5rem 0.5rem 0rem 0.5rem;
-        h3{
-          color: $tittles;
-          margin: 2rem 1rem 0 0;
-          font-size: 1.3rem;
-          justify-content: center;
-          align-items: center;
-        }
-        .facebook{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .fbIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-        .google{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .googleIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-        .twitter{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .twIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-      }
-  } */
 }
-.formContainer .login {
+.backLogin .formContainer .login {
   background-color: rgba(20, 20, 20, 0.6431372549);
   border-radius: 20px;
   width: 40vw;
@@ -155,138 +92,135 @@
   display: flex;
   flex-direction: column;
 }
-.formContainer .login h2 {
+.backLogin .formContainer .login h2 {
   font-family: "Gochi Hand", cursive;
   font-size: 2.5rem;
   font-weight: 300;
   color: #d095fa;
   margin: 2rem;
 }
-.formContainer .login div {
+.backLogin .formContainer .login div {
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.formContainer .login div .btnLogin {
+.backLogin .formContainer .login div .btnLogin {
   background-color: rgba(20, 20, 20, 0.6431372549);
-  padding: 1.5rem;
-  font-size: 3rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  font-size: 2rem;
   border-radius: 10px;
-  border: 5px solid #d095fa;
+  border: 3px solid #d095fa;
   color: #E8E8E8;
 }
-.formContainer .login div .btnLogin:hover {
+.backLogin .formContainer .login div .btnLogin:hover {
   box-shadow: 0px 0px 30px 2px #d095fa;
 }
 
-.allUsers {
-  display: flex;
-  flex-direction: column;
-}
-.allUsers header {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.allUsers header img {
-  position: absolute;
-  width: 100%;
-}
-.allUsers header .infoLog {
-  position: inherit;
-  display: flex;
-  flex-direction: row;
-  border: 2px dotted #c3fae4;
-  border-radius: 10px;
-  height: 15rem;
-  width: 30rem;
-  margin-top: 5rem;
-  margin-right: 10rem;
-  padding: 1.5rem;
-  color: #E8E8E8;
-}
-.allUsers header .infoLog .uinfo {
-  background-color: #ff99bd;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
-.allUsers header .infoLog .uinfo p {
-  font-size: 1.3rem;
-}
-.allUsers header .infoLog .btnLogout {
-  background-color: rgba(20, 20, 20, 0.6431372549);
-  margin: 3rem;
-  height: 3rem;
-  width: 8rem;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  border-color: rgba(20, 20, 20, 0.6431372549);
-  color: #E8E8E8;
-}
-.allUsers header .infoLog .btnLogout:hover {
-  box-shadow: 0px 0px 10px 2px #E8E8E8;
-}
-.allUsers .cardsContainer {
-  position: inherit;
-  margin-top: 3rem;
-  height: 50vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.allUsers .cardsContainer .userCard {
-  background-image: url("/public/assets/background4.png");
-  border-radius: 0px 20px 0px 20px;
-  width: 15rem;
-  height: 23rem;
-  margin: 2rem;
-  padding: 1rem;
+.usersContainer {
+  background-image: url("/assets/background2.png");
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.allUsers .cardsContainer .userCard .cardPic {
-  width: 80%;
-  border-radius: 0px 20px 0px 20px;
+.usersContainer h1 {
+  margin: 3rem;
+  color: #E8E8E8;
 }
-.allUsers .cardsContainer .userCard p {
-  margin-top: 1rem;
+.usersContainer .link {
+  text-decoration: none;
+}
+.usersContainer .link h3 {
   font-family: "Gochi Hand", cursive;
-  font-size: 2rem;
-  color: #d095fa;
+  font-size: 5rem;
+  color: #ff99bd;
 }
-.allUsers .cardsContainer .userCard .card-footer {
-  margin-top: 1rem;
+
+.backUsers .allUsers {
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
-.allUsers .cardsContainer .userCard .card-footer .btnDetail {
-  background-color: #E8E8E8;
-  margin: 1rem;
-  height: 3rem;
-  width: 8rem;
+.backUsers .allUsers header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40vh;
+  width: 100vw;
+}
+.backUsers .allUsers header .divimg {
+  width: 80rem;
+  height: 15rem;
+  display: flex;
+}
+.backUsers .allUsers header .divimg img {
+  height: auto;
+}
+.backUsers .allUsers header .infoLog {
+  position: inherit;
+  display: flex;
+  flex-direction: row;
+  border: 2px dotted #c3fae4;
+  border-radius: 10px;
+  height: 10rem;
+  width: 20rem;
+  margin-top: 5rem;
+  margin-right: 10rem;
+  padding: 1.5rem;
+  color: #E8E8E8;
+}
+.backUsers .allUsers header .infoLog .uinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+.backUsers .allUsers header .infoLog .uinfo .picLog {
+  width: 7rem;
+  border-radius: 20px;
+}
+.backUsers .allUsers header .infoLog div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.backUsers .allUsers header .infoLog div .btnLogout {
+  background-color: rgba(20, 20, 20, 0.6431372549);
+  padding: 1rem;
+  margin: 3rem;
+  height: 4rem;
+  width: 9rem;
   font-size: 1.3rem;
   border-radius: 10px;
-  border-style: solid;
-  border-color: #ffd49a;
-  color: rgba(20, 20, 20, 0.6431372549);
+  border-color: rgba(20, 20, 20, 0.6431372549);
+  color: #E8E8E8;
 }
-.allUsers .cardsContainer .userCard .card-footer .btnDetail:hover {
-  box-shadow: 0px 0px 10px 2px #ffd49a;
+.backUsers .allUsers header .infoLog div .btnLogout:hover {
+  box-shadow: 0px 0px 10px 2px #E8E8E8;
 }
-.allUsers footer {
+.backUsers .allUsers .divAdd {
+  position: inherit;
+  height: auto;
   width: 100%;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.allUsers footer .tooltip {
+.backUsers .allUsers .divAdd .tooltip {
   position: relative;
   display: inline-block;
 }
-.allUsers footer .tooltip .tooltiptext {
+.backUsers .allUsers .divAdd .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: rgba(20, 20, 20, 0.6431372549);
@@ -298,17 +232,63 @@
   position: absolute;
   z-index: 1;
 }
-.allUsers footer .addOne {
+.backUsers .allUsers .divAdd .addOne {
   font-size: 4rem;
   color: #ff99bd;
   margin-right: 15rem;
   width: 5rem;
 }
-.allUsers footer .addOne:hover {
+.backUsers .allUsers .divAdd .addOne:hover {
   color: #ffd49a;
 }
-.allUsers footer .tooltip:hover .tooltiptext {
+.backUsers .allUsers .divAdd .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+.backUsers .allUsers .cardsContainer {
+  margin-top: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.backUsers .allUsers .cardsContainer .userCard {
+  background-image: url("/assets/background4.png");
+  border-radius: 0px 20px 0px 20px;
+  width: 15rem;
+  height: 23rem;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.backUsers .allUsers .cardsContainer .userCard .cardPic {
+  width: 80%;
+  border-radius: 0px 20px 0px 20px;
+}
+.backUsers .allUsers .cardsContainer .userCard p {
+  margin-top: 1rem;
+  font-family: "Gochi Hand", cursive;
+  font-size: 2rem;
+  color: #d095fa;
+}
+.backUsers .allUsers .cardsContainer .userCard .card-footer {
+  margin-top: 1rem;
+}
+.backUsers .allUsers .cardsContainer .userCard .card-footer .btnDetail {
+  background-color: #E8E8E8;
+  margin: 1rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffd49a;
+  color: rgba(20, 20, 20, 0.6431372549);
+}
+.backUsers .allUsers .cardsContainer .userCard .card-footer .btnDetail:hover {
+  box-shadow: 0px 0px 10px 2px #ffd49a;
 }
 
 .userArea {
@@ -319,6 +299,18 @@
 }
 .userArea header {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 100vw;
+}
+.userArea header .divimg {
+  height: 15rem;
+  margin: 5rem;
+}
+.userArea header .divimg img {
+  height: auto;
 }
 .userArea .cardInfo {
   background-color: rgba(232, 232, 232, 0.5215686275);
@@ -427,6 +419,18 @@
 }
 .editUser header {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 100vw;
+}
+.editUser header .divimg {
+  height: 15rem;
+  margin: 5rem;
+}
+.editUser header .divimg img {
+  height: auto;
 }
 .editUser .cardEdit {
   background-color: rgba(232, 232, 232, 0.5215686275);
@@ -456,11 +460,11 @@
 }
 .editUser .cardEdit .formEdit .dataEdit h3 {
   margin-left: 2rem;
+  margin-bottom: 0.5rem;
   font-family: "Tenor Sans";
   font-weight: 200;
   font-size: 1.5rem;
   color: #fffbbb;
-  margin-bottom: 0.5rem;
 }
 .editUser .cardEdit .formEdit .dataEdit .editinp {
   background-color: rgba(20, 20, 20, 0.6431372549);
@@ -529,6 +533,18 @@
 }
 .createUser header {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 40vh;
+  width: 100vw;
+}
+.createUser header .divimg {
+  height: 15rem;
+  margin: 5rem;
+}
+.createUser header .divimg img {
+  height: auto;
 }
 .createUser .cardCreate {
   background-color: rgba(232, 232, 232, 0.5215686275);
@@ -614,20 +630,224 @@
 .notFound {
   width: 100vw;
   height: 100vh;
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 .notFound img {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
 }
 .notFound h3 {
-  position: absolute;
   font-family: "Tenor Sans";
   color: #ff99bd;
-  margin-bottom: 3.5rem;
+  margin: 3.5rem;
   font-size: 2.5rem;
+}
+
+/*Ajustes a diferentes pantallas*/
+@media screen and (max-width: 1024px) {
+  .backWelcome .welcome .infoWelcome {
+    width: 80vw;
+  }
+  .backWelcome .welcome .infoWelcome .btnIn .btnContinue {
+    font-size: 6rem;
+  }
+  .userArea header {
+    height: 30vh;
+  }
+  .userArea header .divimg {
+    margin: 0 0 0 2rem;
+  }
+  .userArea .cardInfo {
+    width: 60vw;
+  }
+  .createUser header {
+    height: 30vh;
+  }
+  .createUser header .divimg {
+    margin: 0 0 0 2rem;
+  }
+  .createUser .cardCreate {
+    width: 60vw;
+    height: 50vh;
+  }
+  .editUser header {
+    height: 30vh;
+  }
+  .editUser header .divimg {
+    margin: 0 0 0 2rem;
+  }
+  .editUser .cardEdit {
+    width: 60vw;
+    height: 50vh;
+  }
+  .usersContainer {
+    background-image: url("/assets/background1.png");
+  }
+}
+@media screen and (max-width: 768px) {
+  .backWelcome .welcome .infoWelcome {
+    height: 40vh;
+  }
+  .backLogin .formContainer .login {
+    width: 60vw;
+  }
+  .backLogin .formContainer .login h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .backUsers .allUsers header {
+    height: 30vh;
+  }
+  .backUsers .allUsers header .divimg {
+    margin: 0 0 0 2rem;
+  }
+  .backUsers .allUsers header .infoLog {
+    margin-right: 1rem;
+  }
+  .backUsers .allUsers .divAdd {
+    justify-content: center;
+  }
+  .backUsers .allUsers .divAdd .addOne {
+    margin-right: 0;
+  }
+  .createUser .cardCreate {
+    align-items: center;
+    padding: 3rem;
+  }
+  .createUser .cardCreate h1 {
+    text-align: center;
+  }
+  .createUser .cardCreate .formAdd {
+    flex-direction: column;
+  }
+  .createUser .cardCreate .formAdd .newData h3 {
+    margin-left: 0;
+  }
+  .createUser .cardCreate .formAdd .newData .editinp {
+    margin: 1rem 0 1rem 0;
+  }
+  .userArea .cardInfo .info .right .editUser div {
+    margin-top: 5rem;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .userArea .cardInfo .info .right .editUser div .btnEdit {
+    margin: 1rem;
+  }
+  .userArea .cardInfo .info .right .editUser div .btnDelete {
+    margin: 1rem;
+  }
+  .editUser .cardEdit {
+    align-items: center;
+    padding: 3rem;
+  }
+  .editUser .cardEdit h1 {
+    text-align: center;
+  }
+  .editUser .cardEdit .formEdit {
+    flex-direction: column;
+  }
+  .editUser .cardEdit .formEdit .dataEdit h3 {
+    margin-left: 0;
+  }
+  .editUser .cardEdit .formEdit .dataEdit .editinp {
+    margin: 1rem 0 1rem 0;
+  }
+  .notFound img {
+    width: 80vw;
+  }
+  .notFound h3 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .backWelcome {
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .backWelcome .navbar .logo {
+    margin-left: 2rem;
+  }
+  .backWelcome .welcome .infoWelcome {
+    width: 90vw;
+    height: 60vh;
+  }
+  .backLogin {
+    background-image: none;
+  }
+  .backLogin .navbar .logo {
+    margin-left: 2rem;
+  }
+  .backLogin .navbar .logo img {
+    margin-top: 0.5rem;
+  }
+  .backLogin .formContainer {
+    width: 100vw;
+    height: 75vh;
+  }
+  .backLogin .formContainer .login {
+    width: 70vw;
+  }
+  .backLogin .formContainer .login h2 {
+    font-size: 2.3rem;
+  }
+  .backLogin .formContainer .login div .btnLogin {
+    font-size: 1.5rem;
+  }
+  .usersContainer h1 {
+    text-align: center;
+  }
+  .usersContainer .link h3 {
+    font-size: 3rem;
+  }
+  .backUsers .allUsers header {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .backUsers .allUsers header .divimg {
+    width: auto;
+  }
+  .backUsers .allUsers header .infoLog {
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .backUsers .allUsers .divAdd {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .createUser .cardCreate {
+    width: 90vw;
+    padding: 0.7rem;
+  }
+  .createUser .cardCreate h1 {
+    margin: 0;
+  }
+  .createUser .cardCreate .formAdd .newData .editinp {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  .userArea .cardInfo {
+    width: 80vw;
+    height: 50vh;
+    padding: 0.7rem;
+  }
+  .editUser .cardEdit {
+    width: 80vw;
+    height: 60vh;
+    padding: 0.5rem;
+  }
+  .editUser .cardEdit h1 {
+    margin: 0.3rem;
+  }
+  .editUser .formEdit .dataEdit .editinp {
+    margin: 0.5rem 0 0.5rem 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

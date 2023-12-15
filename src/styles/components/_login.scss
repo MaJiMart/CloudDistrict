@@ -1,155 +1,44 @@
-.formContainer {
-  height: 70vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .login {
-    background-color: $back;
-    border-radius: 20px;
-    width: 40vw;
-    height: 50vh;
-    padding: 3rem;
+.backLogin{
+  background-image: url('/assets/background3.png');
+  height: 100vh;
+  .formContainer {
+    height: 70vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    //justify-content: center;
-    h2 {
-      font-family: $heading;
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: $tittles;
-      margin: 2rem;
-    }
-    div{
-      height: 50%;
+    justify-content: center;
+    align-items: center;
+    .login {
+      background-color: $back;
+      border-radius: 20px;
+      width: 40vw;
+      height: 50vh;
+      padding: 3rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      .btnLogin{
-        background-color: $back;
-        padding: 1.5rem 2rem 1.5rem 2rem;
-        font-size: 2rem;
-        border-radius: 10px;
-        border: 3px solid $tittles;
-        color: $white;
-        &:hover{
-          box-shadow: 0px 0px 30px 2px $tittles;
+      flex-direction: column;
+      h2 {
+        font-family: $heading;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: $tittles;
+        margin: 2rem;
+      }
+      div{
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btnLogin{
+          background-color: $back;
+          padding: 1.5rem 2rem 1.5rem 2rem;
+          font-size: 2rem;
+          border-radius: 10px;
+          border: 3px solid $tittles;
+          color: $white;
+          &:hover{
+            box-shadow: 0px 0px 30px 2px $tittles;
+          }
         }
       }
     }
   }
-  /*   .formlogin{
-    background-color: $back;
-    border-radius: 20px;
-    width: 40vw;
-    height: 50vh;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      h2{
-        font-family: $heading;
-        font-size: 2.5rem;
-        color: $tittles;
-        margin-bottom: 1rem;
-      }
-      .campo{
-        background-color: $back;
-        height: 3rem;
-        margin: 0.5rem 0rem 0.5rem 0rem;
-        padding: 1rem;
-        font-size: 1.3rem;
-        color: $white;
-        border-color: $other;
-        border-radius: 10px;
-      }
-      .btnContainer{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin: 0rem 0.5rem 0rem 0.5rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid $back;
-        .btnLogin{
-          background-color: $back;
-          margin: 0.5rem 0rem 0.5rem 0rem;
-          height: 3rem;
-          width: 8rem;
-          font-size: 1.3rem;
-          border-radius: 10px;
-          border-color: $other;
-          color: $white;
-          &:hover{
-            box-shadow: 0px 0px 10px 2px $other;
-          }
-        }
-      }
-      span{
-        color: $jazzy;
-        font-size: 1.3rem;
-      }
-      .access{
-        display: flex;
-        flex-direction: row;
-        margin: 0.5rem 0.5rem 0rem 0.5rem;
-        h3{
-          color: $tittles;
-          margin: 2rem 1rem 0 0;
-          font-size: 1.3rem;
-          justify-content: center;
-          align-items: center;
-        }
-        .facebook{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .fbIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-        .google{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .googleIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-        .twitter{
-          margin: 0.5rem 0.5rem 0rem 0.5rem;
-          width: 5rem;
-          height: 5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover{
-            border: 1px solid $white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 5px 5px $white;
-          }
-          .twIcon{
-            color: $white;
-            font-size: 3rem;
-          }
-        }
-      }
-  } */
 }

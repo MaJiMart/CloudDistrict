@@ -5,14 +5,16 @@ import { ButtonAdd } from '../Access/ButtonAdd';
 import { ButtonLogout } from '../Access/ButtonLogout';
 
 export const Users = () => {
-  const { user, isAuthenticated } = useAuth0();
+  const { user } = useAuth0();
   const { users } = useUserContext();
 
   return (
-    isAuthenticated && (
+    <div className='backUsers'>
       <div className='allUsers'>
         <header>
-          <img src='/assets/users3.png' alt='header users image' />
+          <div className='divimg'>
+            <img src='/assets/users.png' alt='users image' />
+          </div>
           <div className='infoLog'>
             <div className='uinfo'>
               {
@@ -24,10 +26,18 @@ export const Users = () => {
               }
             </div>
             <div>
-              <ButtonLogout/>
+              <ButtonLogout />
             </div>
           </div>
         </header>
+        <div className='divAdd'>
+          <Link to={'/newuser'}>
+            <div className='tooltip'>
+              <ButtonAdd />
+              <span className='tooltiptext'>Add a user</span>
+            </div>
+          </Link>
+        </div>
         <div className='cardsContainer'>
           {users.map((user) => (
             <div key={user.id} className='userCard'>
@@ -45,15 +55,7 @@ export const Users = () => {
             </div>
           ))}
         </div>
-        <footer>
-          <Link to={'/newuser'}>
-            <div className='tooltip'>
-              <ButtonAdd />
-              <span className='tooltiptext'>Add a user</span>
-            </div>
-          </Link>
-        </footer>
       </div>
-    ) 
+    </div>
   );
 };

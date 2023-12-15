@@ -1,0 +1,283 @@
+@media screen and (max-width: 1024px) {
+  .backWelcome {
+    .welcome {
+      .infoWelcome {
+        width: 80vw;
+        .btnIn {
+          .btnContinue {
+            font-size: 6rem;
+          }
+        }
+      }
+    }
+  }
+  .userArea {
+    header {
+      height: 30vh;
+      .divimg {
+        margin: 0 0 0 2rem;
+      }
+    }
+    .cardInfo {
+      width: 60vw;
+    }
+  }
+  .createUser {
+    header {
+      height: 30vh;
+
+      .divimg {
+        margin: 0 0 0 2rem;
+      }
+    }
+    .cardCreate {
+      width: 60vw;
+      height: 50vh;
+    }
+  }
+  .editUser {
+    header {
+      height: 30vh;
+
+      .divimg {
+        margin: 0 0 0 2rem;
+      }
+    }
+    .cardEdit {
+      width: 60vw;
+      height: 50vh;
+    }
+  }
+  .usersContainer {
+    background-image: url('/assets/background1.png');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backWelcome {
+    .welcome {
+      .infoWelcome {
+        height: 40vh;
+      }
+    }
+  }
+  .backLogin {
+    .formContainer {
+      .login {
+        width: 60vw;
+        h2 {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .backUsers {
+    .allUsers {
+      header {
+        height: 30vh;
+        .divimg {
+          margin: 0 0 0 2rem;
+        }
+        .infoLog {
+          margin-right: 1rem;
+        }
+      }
+      .divAdd {
+        justify-content: center;
+        .addOne {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .createUser {
+    .cardCreate {
+      align-items: center;
+      padding: 3rem;
+      h1 {
+        text-align: center;
+      }
+      .formAdd {
+        flex-direction: column;
+        .newData {
+          h3 {
+            margin-left: 0;
+          }
+          .editinp {
+            margin: 1rem 0 1rem 0;
+          }
+        }
+      }
+    }
+  }
+  .userArea {
+    .cardInfo {
+      .info {
+        .right {
+          .editUser {
+            div {
+              margin-top: 5rem;
+              flex-direction: row;
+              justify-content: flex-end;
+              .btnEdit {
+                margin: 1rem;
+              }
+              .btnDelete {
+                margin: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .editUser {
+    .cardEdit {
+      align-items: center;
+      padding: 3rem;
+      h1 {
+        text-align: center;
+      }
+      .formEdit {
+        flex-direction: column;
+        .dataEdit {
+          h3 {
+            margin-left: 0;
+          }
+          .editinp {
+            margin: 1rem 0 1rem 0;
+          }
+        }
+      }
+    }
+  }
+  .notFound {
+    img {
+      width: 80vw;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .backWelcome {
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .navbar {
+      .logo {
+        margin-left: 2rem;
+      }
+    }
+    .welcome {
+      .infoWelcome {
+        width: 90vw;
+        height: 60vh;
+      }
+    }
+  }
+  .backLogin {
+    background-image: none;
+    .navbar {
+      .logo {
+        margin-left: 2rem;
+        img {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    .formContainer {
+      width: 100vw;
+      height: 75vh;
+      .login {
+        width: 70vw;
+        h2 {
+          font-size: 2.3rem;
+        }
+        div {
+          .btnLogin {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .usersContainer {
+    h1 {
+      text-align: center;
+    }
+    .link {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+  .backUsers {
+    .allUsers {
+      header {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        .divimg {
+          width: auto;
+        }
+        .infoLog {
+          position: relative;
+          margin-top: 0;
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+      .divAdd {
+        position: relative;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .createUser{
+    .cardCreate{
+      width: 90vw;
+      padding: 0.7rem;
+      h1{
+        margin: 0;
+      }
+      .formAdd{
+        .newData{
+          .editinp {
+            margin: 0.5rem 0 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+  .userArea{
+    .cardInfo{
+      width: 80vw;
+      height: 50vh;
+      padding: 0.7rem;
+    }
+  }
+  .editUser {
+    .cardEdit{
+      width: 80vw;
+      height: 60vh;
+      padding: 0.5rem;
+      h1{
+        margin: 0.3rem;
+      }
+    }
+    .formEdit{
+      .dataEdit{
+        .editinp{
+          margin: 0.5rem 0 0.5rem 0;
+        }
+      }
+    }
+  }
+}

@@ -62,10 +62,11 @@ export const NewUser = () => {
   };
 
   return (
-    isAuthenticated && (
       <div className='createUser'>
         <header>
-          <img src='/assets/newuser.png' alt='header users image' />
+          <div className='divimg'>
+          <img src='/assets/newUser.png' alt='header users image' />
+          </div>
         </header>
         <div className='cardCreate'>
           <h1> Create a new one: </h1>
@@ -110,5 +111,4 @@ export const NewUser = () => {
         </footer>
       </div>
     )
-  );
 };

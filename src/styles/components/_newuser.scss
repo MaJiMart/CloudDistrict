@@ -5,6 +5,18 @@
   align-items: center;
   header {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 40vh;
+    width: 100vw;
+    .divimg {
+      height: 15rem;
+      margin: 5rem;
+      img {
+        height: auto;
+      }
+    }
   }
   .cardCreate {
     background-color: $ligthback;

@@ -7,7 +7,7 @@ export const Welcome = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <>
+    <div className='backWelcome'>
       <NavBar />
       <div className='welcome'>
         <div className='infoWelcome'>
@@ -26,6 +26,6 @@ export const Welcome = () => {
           </div>
         </div>
       </div>
-    </>
+    </div >
   );
 };

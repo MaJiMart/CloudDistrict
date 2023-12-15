@@ -10,9 +10,12 @@
 @import './components/welcome';
 @import './components/navbar';
 @import './components/login';
+@import './components/usersContainer';
 @import './components/users';
 @import './components/userinfo';
 @import './components/patchuser';
 @import './components/newuser';
 @import './components/notfound';
 
+/*Ajustes a diferentes pantallas*/
+@import './views/queries';

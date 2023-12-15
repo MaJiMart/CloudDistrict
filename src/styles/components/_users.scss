@@ -1,145 +1,154 @@
-.allUsers {
-  display: flex;
-  flex-direction: column;
-  header {
-    position: relative;
+.backUsers {
+  .allUsers {
+    height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 35vh;
-    img {
-      position: absolute;
-      width: 100%;
-    }
-    .infoLog {
-      position: inherit;
+    flex-direction: column;
+    header {
+      position: relative;
       display: flex;
       flex-direction: row;
-      border: 2px dotted $light;
-      border-radius: 10px;
-      height: 10rem;
-      width: 20rem;
-      margin-top: 5rem;
-      margin-right: 10rem;
-      padding: 1.5rem;
-      color: $white;
-      .uinfo {
+      justify-content: flex-end;
+      height: 40vh;
+      width: 100vw;
+      .divimg {
+        width: 80rem;
+        height: 15rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100%;
-        border-radius: 10px;
-        .picLog {
-          width: 7rem;
-          border-radius: 20px;
+        img {
+          height: auto;
         }
       }
-      div {
+      .infoLog {
+        position: inherit;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100%;
+        flex-direction: row;
+        border: 2px dotted $light;
+        border-radius: 10px;
+        height: 10rem;
+        width: 20rem;
+        margin-top: 5rem;
+        margin-right: 10rem;
         padding: 1.5rem;
-        border-radius: 10px;
-        .btnLogout {
-          background-color: $back;
-          padding: 1rem;
-          margin: 3rem;
-          height: 4rem;
-          width: 9rem;
-          font-size: 1.3rem;
-          border-radius: 10px;
-          border-color: $back;
-          color: $white;
-          &:hover {
-            box-shadow: 0px 0px 10px 2px $white;
-          }
-        }
-      }
-    }
-  }
-  .cardsContainer {
-    position: inherit;
-    margin-top: 3rem;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    .userCard {
-      background-image: url('/assets/background4.png');
-      border-radius: 0px 20px 0px 20px;
-      width: 15rem;
-      height: 23rem;
-      margin: 2rem;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .cardPic {
-        width: 80%;
-        border-radius: 0px 20px 0px 20px;
-      }
-      p {
-        margin-top: 1rem;
-        font-family: $heading;
-        font-size: 2rem;
-        color: $tittles;
-      }
-      .card-footer {
-        margin-top: 1rem;
-        .btnDetail {
-          background-color: $white;
-          margin: 1rem;
-          height: 3rem;
-          width: 8rem;
-          font-size: 1.3rem;
-          border-radius: 10px;
-          border-style: solid;
-          border-color: $other;
-          color: $back;
-          &:hover {
-            box-shadow: 0px 0px 10px 2px $other;
-          }
-        }
-      }
-    }
-  }
-  footer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: $back;
         color: $white;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
+        .uinfo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 100%;
+          border-radius: 10px;
+          .picLog {
+            width: 7rem;
+            border-radius: 20px;
+          }
+        }
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          height: 100%;
+          padding: 1.5rem;
+          border-radius: 10px;
+          .btnLogout {
+            background-color: $back;
+            padding: 1rem;
+            margin: 3rem;
+            height: 4rem;
+            width: 9rem;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            border-color: $back;
+            color: $white;
+            &:hover {
+              box-shadow: 0px 0px 10px 2px $white;
+            }
+          }
+        }
       }
     }
-    .addOne {
-      font-size: 4rem;
-      color: $jazzy;
-      margin-right: 15rem;
-      width: 5rem;
-      &:hover {
-        color: $other;
+    .divAdd{
+      position: inherit;
+      height: auto;
+      width: 100%;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        .tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: $back;
+          color: $white;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+        }
+      }
+      .addOne {
+        font-size: 4rem;
+        color: $jazzy;
+        margin-right: 15rem;
+        width: 5rem;
+        &:hover {
+          color: $other;
+        }
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
       }
     }
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
+    .cardsContainer {
+      margin-top: 3rem 0 3rem 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .userCard {
+        background-image: url('/assets/background4.png');
+        border-radius: 0px 20px 0px 20px;
+        width: 15rem;
+        height: 23rem;
+        margin: 2rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .cardPic {
+          width: 80%;
+          border-radius: 0px 20px 0px 20px;
+        }
+        p {
+          margin-top: 1rem;
+          font-family: $heading;
+          font-size: 2rem;
+          color: $tittles;
+        }
+        .card-footer {
+          margin-top: 1rem;
+          .btnDetail {
+            background-color: $white;
+            margin: 1rem;
+            height: 3rem;
+            width: 8rem;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: $other;
+            color: $back;
+            &:hover {
+              box-shadow: 0px 0px 10px 2px $other;
+            }
+          }
+        }
+      }
     }
   }
 }

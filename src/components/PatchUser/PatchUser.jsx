@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate} from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useUserContext } from '../../context/UserContext';
@@ -8,7 +7,6 @@ import { ButtonBack } from '../Access/ButtonBack';
 import { ButtonHome } from '../Access/ButtonHome';
 
 export const PatchUser = () => {
-  const { isAuthenticated } = useAuth0();
   const { API_URL } = useUserContext();
   const { uid } = useParams();
   
@@ -64,10 +62,11 @@ export const PatchUser = () => {
   };
 
   return (
-    /* isAuthenticated && ( */
       <div className='editUser'>
         <header>
-          <img src='/assets/edituser.png' alt='header users image' />
+          <div className='divimg'>
+            <img src='/assets/editUser.png' alt='edit users image' />
+          </div>
         </header>
         <div className='cardEdit'>
           <h1>You are editing the user with id {uid}</h1>
@@ -115,5 +114,4 @@ export const PatchUser = () => {
         </footer>
       </div>
     )
- /*  ); */
 };

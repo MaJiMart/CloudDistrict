@@ -3,7 +3,7 @@ import { ButtonLogin } from '../Access/ButtonLogin';
 
 export const Login = () => {
   return (
-    <>
+    <div className='backLogin'>
       <NavBar />
       <div className='formContainer'>
         <div className='login'>
@@ -13,6 +13,6 @@ export const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

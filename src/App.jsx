@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import { Auth0Provider } from '@auth0/auth0-react';
 import { UserContextProv } from './context/UserContext';
 import { Welcome } from './components/Welcome/welcome';
 import { Login } from './components/Login/Login';
-import { Users } from './components/Users/Users';
+import { UsersContainer } from './components/UsersContainer/UsersContainer';
 import { UserInfo } from './components/UserInfo/UserInfo';
 import { NewUser } from './components/NewUser/NewUser';
 import { PatchUser } from './components/PatchUser/PatchUser';
@@ -12,6 +12,7 @@ import { NotFound } from './components/NotFound/NotFound';
 function App() {
   const domain = import.meta.env.VITE_ATH0_DOMAIN;
   const clientId = import.meta.env.VITE_ATH0_CLIENT_ID;
+
 
   return (
     <Auth0Provider
@@ -24,7 +25,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Welcome />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/users' element={<Users />} />
+            <Route path='/users' element={<UsersContainer />} />
             <Route path='/newuser' element={<NewUser />} />
             <Route path='/user/:uid' element={<UserInfo />} />
             <Route path='/user/edit/:uid' element={<PatchUser />} />
